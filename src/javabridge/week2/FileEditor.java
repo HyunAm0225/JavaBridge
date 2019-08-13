@@ -17,7 +17,7 @@ public class FileEditor {
 	
 	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	try {
-	BufferedWriter writer = new BufferedWriter(new FileWriter("F:/JAVA/javabridge"+filename));
+	BufferedWriter writer = new BufferedWriter(new FileWriter("F:/JAVA/javabridge/"+filename));
 			String s;
 			while(!(s=reader.readLine()).equals("q")) {
 				writer.write(s+"\r\n");
