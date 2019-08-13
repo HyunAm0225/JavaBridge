@@ -13,7 +13,7 @@ public class FileEditor {
 	System.out.printf("## 저장할 파일명: ");
 	Scanner sc = new Scanner(System.in);
 	String filename = sc.next();
-	System.out.printf("## 저장은 마지막 라인에 q입력");
+	System.out.printf("## 저장은 마지막 라인에 q입력 : ");
 	
 	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	try {
