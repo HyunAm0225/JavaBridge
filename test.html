@@ -1,0 +1,702 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+<!--아이패드일때-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=990px, initial-scale=1.0, maximum-scale=1.0, minimum-scale=-1.0, user-scalable=yes" />
+
+
+<title> 대학소개 | 가천대학교</title>
+<link href="/css/layout.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/board.css" rel="stylesheet" type="text/css" />
+
+
+<link href="/css/introduce.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/css/tikslusbox.css" > 
+
+
+<script type="text/javascript" src="/js/CheckUtil.js"></script>
+<script type="text/javascript" src="/js/default.js"></script>
+<script type="text/javascript" src="/js/tagCalendar.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+<link rel="shortcut icon" href="/images/url.ico" /><!--//favicon-->
+<script type="text/javascript" src="/js/jquery-1.4.2.js"></script><!--//메인컨텐츠-->
+<script type="text/javascript" src="/js/gnb.js"></script>
+<script type="text/javascript" src="/search/common/js/search.js"></script> <!--//검색 스크립트-->
+<script type="text/javascript" src="/js/tikslusbox.js"></script>
+<script type="text/javascript" src="/js/bowser.js"></script>
+<script type="text/javascript" src="/js/otp.js"></script>
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="/css/ie6.css">
+<![endif]-->
+
+               
+<!--[if lte IE 6]>
+<script type="text/javascript">
+
+function setPng24(obj) {
+obj.width=obj.height=1;
+obj.className=obj.className.replace(/\bpng24\b/i,'');
+obj.style.filter =
+"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+ obj.src +"',sizingMethod='image');"
+obj.src=''; 
+return '';
+}
+</script>
+
+<![endif]-->
+
+<script type="text/javascript">
+	function home_manual(){
+	
+		var w = 1100;
+		var h = 800;
+		var window_left = (screen.width-w)/2;
+		var window_top = (screen.height-h)/2;	
+		var add_data_win = window.open('http://www.1step.co.kr/bbs_shop/list.htm?board_code=manual','add_data_win','top='+window_top+',left='+window_left+',width='+w+',height='+h+',toolbar=no,scrollbars=yes,resizable=yes,status=yes,menubar=no,location=no');
+		add_data_win.focus();
+	}
+
+	//-----검색 요청-----
+	function DQsearchAction()
+	{
+		var f = document.searchForm;
+		if(f.searchTerm.value == "")
+		{
+			alert("검색어를 입력하세요.");
+			f.searchTerm.focus();
+			return false;
+		}
+		//기간에 값이 있을 경우 필터링
+	    if (f.search_sdate.value != "" && f.search_edate.value != "") 
+		{
+			if (f.search_edate.value < f.search_sdate.value)
+			{
+				alert("시작일은 끝날짜 보다 클 수 없습니다.");
+				f.search_edate.select();
+				return;
+			}
+		}     
+		f.submit();
+	}
+
+	function DQsearchAction2()
+	{
+		var f = document.topSearchForm;
+		if(f.searchTerm.value == "")
+		{
+			alert("검색어를 입력하세요.");
+			f.searchTerm.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+
+
+</head>
+
+<body>
+<div class="wrap_box">
+<div id="wrap">
+	<div id="accessibility">
+		<ul>
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#snb">서브메뉴바로가기</a></li>
+			<li><a href="#container">본문내용바로가기</a></li>
+			<li><a href="#footer">바닥글바로가기</a></li>
+		</ul>  
+	</div><!--//accessibility-->
+	
+	<noscript>
+	<div class="noscript">스크립트 동작이 활성화 되지 않아 일부기능이 원활하게 동작하지 않을 수 있습니다.</div>
+	</noscript>
+
+	<noscript>
+	<div class="nognb">
+		<dl class="nognb1">
+			<dt><span>대학소개</span></dt>
+				<dd><a href="/introduce/chairman/01.jsp">총장실</a></dd>
+				<dd><a href="/introduce/gachon/01.jsp">대학안내</a></dd>
+				<dd><a href="/introduce/foundation/01.jsp">학교재단</a></dd>
+				<dd><a href="/introduce/university/01.jsp">대학조직</a></dd>
+				<dd><a href="/introduce/cyber/01.jsp?boardType_seq=336">사이버홍보실</a></dd>
+				<dd><a href="/introduce/campus/01.jsp">캠퍼스안내</a></dd>
+		</dl>
+		<dl class="nognb2">
+			<dt><span>입학</span></dt>
+				<dd><a href="http://admission.gachon.ac.kr/kyungwon/" target="_blank" title="새창으로열림">글로벌캠퍼스</a></dd>
+				<dd><a href="http://ipsi.gachon.ac.kr" target="_blank" title="새창으로열림">메디컬캠퍼스</a></dd>
+			
+		</dl>
+ 
+		<dl class="nognb3">
+			<dt><span>대학 대학원</span></dt>
+				<dd><a href="/university/college/college_intro.jsp">[대학] 글로벌캠퍼스</a></dd>
+				<dd><a href="/university/college_ic/college_intro.jsp">[대학] 메디컬캠퍼스</a></dd>
+				<dd><a href="/university/postgraduate/general_intro.jsp">[대학원] 글로벌캠퍼스</a></dd>
+				<dd><a href="/university/postgraduate_ic/general_intro.jsp">[대학원] 메디컬캠퍼스</a></dd>
+			
+		</dl>
+
+		<dl class="nognb4">
+			<dt><span>연구 산학</span></dt>
+				<dd><a href="/research/laboratory/01.jsp">연구처/산학협력단 소개</a></dd>
+				<dd><a href="/research/center/01.jsp">연구소안내</a></dd>
+				<dd><a href="/research/support/01.jsp?boardType_seq=461">교내연구지원</a></dd>
+				<dd><a href="/research/notice/01.jsp?boardType_seq=462">공지사항</a></dd>
+				<dd><a href="/research/morgue/01.jsp?boardType_seq=465">자료실</a></dd>
+				<dd><a href="https://gcusanhak.gachon.ac.kr/sso/main.jsp" target="_blank" title="새창으로열림">산단통합관리시스템</a></dd>
+		</dl>
+		<dl class="nognb5">
+			<dt><span>학사안내</span></dt>
+				<dd><a href="/affairs/info/01.jsp?boardType_seq=340">학사정보</a></dd>
+				<dd><a href="/affairs/scholar/01.jsp">장학</a></dd>
+				<dd><a href="http://job.kyungwon.ac.kr/" target="_blank" title="새창열림">취업</a></dd>
+				<dd><a href="/affairs/military/01.jsp">병무</a></dd>
+				<dd><a href="/affairs/exchange/01.jsp">국제교류</a></dd>
+				<dd><a href="/affairs/remote/01.jsp">원격강의</a></dd>
+		</dl>
+		<dl class="nognb6">
+			<dt><span>학사행정</span></dt>
+				<dd><a href="http://gcis.gachon.ac.kr/sso/login.jsp" target="_blank" title="새창열림">학사행정</a></dd>
+		</dl>
+		<dl class="nognb7">
+			<dt><span>커뮤니티</span></dt>
+				<dd><a href="/community/homepage/01.jsp">홈페이지광장</a></dd>
+				<dd><a href="/community/opencampus/03.jsp?boardType_seq=358">열린캠퍼스</a></dd>
+				<dd><a href="/community/counsel/01.jsp">학생상담</a></dd>
+				<dd><a href="/community/life/01.jsp">커뮤니티</a></dd>
+				
+		</dl>
+
+	</div><!--//nognb-->
+	</noscript>
+	 
+	<hr />
+
+
+	
+
+<div id="header">
+
+    <h1>
+	<!--<object type="application/x-shockwave-flash" data="/fla/logo_white.swf" id="main_visual" width="156" height="39" class="logo" title="가천대학교로고" >
+			<param name="movie" value="/fla/logo_white.swf" />
+			<param name="allowFullScreen" value="false" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<img src="/images/gnb/h1_logo.png" alt="가천대학교"  />
+	</object>-->
+
+
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="156" height="39" class="logo"  title="가천대학교로고">
+	
+	<param name="movie" value="/fla/logo_white.swf" />
+	
+	<param name="quality" value="high" />
+	<param name="wmode" value="transparent"/>
+	<!--[if !IE]> <-->
+
+	<object type="application/x-shockwave-flash" data="/fla/logo_white.swf" width="156" height="39">
+	
+	<param name="movie" value="/fla/logo_white.swf"/>
+	
+	<param name="wmode" value="transparent"/>
+
+	
+	<a href="/"><img src="/images/common/h1_logo.png" alt="가천대학교"  /></a>
+	
+	</object>
+	<!--> <![endif]-->
+	</object></h1>
+
+    <div class="lnb">    
+        <ul>
+            
+
+            
+
+			
+
+			
+            <li><a href="/main.jsp"><img src="/images/common/lnb01.png"  alt="HOME" class="png24"  /></a></li>
+			
+            <li><a href="/faq"><img src="/images/common/lnb02_new.png" class="png24" alt="IT서비스"  /></a></li>
+            
+            <li><a href="https://www.gachon.ac.kr/site/login.jsp"><!--a href="/main.jsp" onclick="alert(' ● 이용에 불편을 드려 죄송합니다.\n sso장애로 인한 오류로 복구 중 입니다.\n 빠른시간내에 복구를 완료하도록 노력하겠습니다.')"--><img src="/images/common/lnb03.png"  alt="로그인" class="png24"  /></a></li>
+            <!--li><a href="/site/join.jsp" onclick="alert('● 2012학년도 수시 및 정시 합격생  회원가입 : 2.24(금) 09:00 이후\n\n● 2012학년도 편입학생 회원가입 가능\n\n학교 홈페이지에서 학생신분으로 회원가입을 하실 수 있습니다.\n※일반회원으로 가입하지 마시고 반드시 학생회원으로 가입 바랍니다.\n(웹메일, 이클래스, 카페, 웹하드 등 사용가능)')"><img src="/images/common/lnb04.png"  alt="회원가입" class="png24"  /></a></li-->
+            <li><a href="/site/join_nice.jsp" onclick="alert(' ●  2019학년도 신입생(수시, 정시)은 2019년 2월 20일(수) 10:00이후 회원가입이 가능합니다. \n\n  ●  본인인증이 불가능한 경우 또는 외국인(foreigner)은 인증방법 선택시 「신입생(인증 불가한 경우) 또는 외국인(foreigner)」을 선택하시기 바랍니다.	\n\n※ 자세한 사항은 2월 중 학교홈페이지 공지사항에 게시.\n\n ● 웹메일, 사이버캠퍼스(舊이클래스), 카페, 웹하드 등 사용가능')"><img src="/images/common/lnb04.png"  alt="회원가입" class="png24"  /></a></li>
+            <!--li><a href="/site/join.jsp" onclick="alert(' (일반회원으로 가입한 학생은 탈퇴후 재가입 바랍니다)\n\n ● 웹메일, 이클래스, 카페, 웹하드 등 사용가능')"><img src="/images/common/lnb04.png"  alt="회원가입" class="png24"  /></a></li-->			
+			
+            
+            <li><a href="/site/site.jsp"><img src="/images/common/lnb05.png"  alt="사이트맵"  class="png24" /></a></li>
+            <li class="site"><a href="/english" target="_blank" title="새창열림"><img src="/images/common/btn_eng.png"  alt="영문사이트바로가기" class="png24"  /></a></li>
+            <li><a href="/china" target="_blank" title="새창열림"><img src="/images/common/btn_cha.png"  alt="중문사이트바로가기" class="png24"  /></a></li>
+        </ul>
+    </div><!--//lnb-->
+
+	<form name="topSearchForm" id="topSearchForm" method="post" action="/search/search.jsp" onsubmit="return DQsearchAction2();">
+	<input type="hidden" name="OfficerWhereSet" />
+	<input type="hidden" name="IntroduceWhereSet" />
+	<input type="hidden" name="NoticeWhereSet" />
+	<input type="hidden" name="UniversityWhereSet" />
+	<input type="hidden" name="ResearchWhereSet" />
+	<input type="hidden" name="AffairsWhereSet" />
+	<input type="hidden" name="CommunityWhereSet" />
+
+    <div id="search">
+        <fieldset>
+            <legend>통합검색</legend>
+            <label for="searchTerm"><img src="/images/common/search.gif" alt="search" /></label>
+            <input type="text" class="ip" id="searchTerm" name="searchTerm" autocomplete='off' /> 
+			<input type="image" class="image" src="/images/common/btn_search.gif" alt="검색" />
+        </fieldset>
+    </div><!--//search-->
+	</form>
+        
+    <div id="gnb">
+        <h2 class="hide">주메뉴입니다.</h2>
+        <div class="head">
+            <ul class="gnb">
+                <li class="gnb1" ><a class="d1" href="/introduce/chairman/01.jsp" ><img src="/images/gnb/gnb01_off.png" class="png24"  alt="대학소개"/></a>
+
+                    <div class="gnbsub">
+						<div class="inner">
+							<dl>
+								<dt><a href="/introduce/chairman/01.jsp"><img src="/images/gnb/intro_gnb01.gif" alt="총장실" /></a></dt>
+									<dd><a href="/introduce/chairman/01.jsp">총장메시지</a></dd>
+									<dd><a href="/introduce/chairman/02.jsp">약력·경력</a></dd>
+									<dd><a href="/introduce/chairman/03.jsp?boardType_seq=321">포토갤러리</a></dd>
+									<!--<dd><a href="/introduce/chairman/04.jsp?boardType_seq=323">메세지함</a></dd>-->
+							</dl>
+							<dl>
+								<dt><a href="/introduce/gachon/01_01.jsp"><img src="/images/gnb/intro_gnb02.gif"  alt="대학안내" /></a></dt>
+								    <!--<dd><a href="/introduce/gachon/01.jsp">대학안내</a></dd>-->
+									<dd><a href="/introduce/gachon/01.jsp">건학이념</a></dd>
+									<dd><a href="/introduce/gachon/12.jsp">교가</a></dd>
+									<dd><a href="/introduce/gachon/04_04.jsp">학교연혁</a></dd>
+									<dd><a href="/introduce/gachon/06.jsp">학교상징</a></dd>								
+									<dd><a href="/introduce/gachon/02.jsp">비전</a></dd>
+									<dd><a href="/introduce/gachon/03.jsp">목표와전략</a></dd>
+									<dd><a href="/introduce/gachon/05.jsp">규정집</a></dd>
+									<dd><a href="/introduce/gachon/14.jsp">특성화 추진전략</a></dd>
+									<dd><a href="/introduce/gachon/09.jsp?boardType_seq=521">대학자체평가</a></dd>
+									<dd><a href="/introduce/gachon/11_1_1.jsp?boardType_seq=743">대학주요회의내용</a></dd>
+									<dd><a href="/introduce/gachon/07_01.jsp">자매결연대학</a></dd>
+									<dd><a href="/introduce/gachon/08.jsp">대학발전기금안내</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="/introduce/foundation/01.jsp"><img src="/images/gnb/intro_gnb03.gif"  alt="학교재단 " /></a></dt>
+									<dd><a href="/introduce/foundation/01.jsp">이사장인사말</a></dd>
+									<dd><a href="/introduce/foundation/02.jsp">재단소개</a></dd>
+									<dd><a href="/introduce/foundation/03.jsp?boardType_seq=324">재무제표</a></dd>
+									<dd><a href="/introduce/foundation/04.jsp">임원현황</a></dd>
+									<dd><a href="/introduce/foundation/05.jsp?boardType_seq=325">가천학원회의록</a></dd>
+							 </dl>
+							 <dl>
+								<dt><a href="/introduce/university/01.jsp"><img src="/images/gnb/intro_gnb04.gif"  alt="대학조직" /></a></dt>
+									<dd><a href="/introduce/university/01.jsp">대학기구표</a></dd>
+									<dd><a href="/introduce/university/02.jsp">부총장</a></dd>
+									<dd><a href="/introduce/university/03_01.jsp">대학본부[글로벌]</a></dd>
+									<dd><a href="/introduce/university/031_01.jsp">대학본부[메디컬]</a></dd>
+									<dd><a href="/introduce/university/04.jsp">교내전화번호</a></dd>
+									<dd><a href="/introduce/university/05_01.jsp">부속기관[글로벌]</a></dd>
+									<dd><a href="/introduce/university/06.jsp">부속기관[메디컬]</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="/introduce/cyber/01.jsp?boardType_seq=336"><img src="/images/gnb/intro_gnb05.gif"  alt="사이버홍보실" /></a></dt>
+									<dd><a href="/introduce/cyber/01.jsp?boardType_seq=336">가천포토</a></dd>
+									<dd><a href="/introduce/cyber/10.jsp">히스토리포토</a></dd>
+									<dd><a href="/introduce/cyber/02.jsp?boardType_seq=337">홍보영상</a></dd>
+									<dd><a href="/introduce/cyber/11.jsp?boardType_seq=784">홍보사진</a></dd>
+									<dd><a href="/introduce/cyber/03.jsp?boardType_seq=668">홍보브로슈어</a></dd>
+									<dd><a href="/introduce/cyber/08_01.jsp">자랑스런 가천 동문</a></dd>
+									<!--dd><a href="/introduce/cyber/09.jsp?boardType_seq=677">자랑스런 가천<br>대학원 동문</a></dd-->
+									<!--dd><a href="/introduce/cyber/04.jsp?boardType_seq=338">교내행사동영상</a></dd>
+									<dd><a href="/introduce/cyber/05.jsp">가천UI</a></dd>
+									<dd><a href="/introduce/cyber/06.jsp?boardType_seq=339">보도자료</a></dd>-->
+							 </dl>
+							 <dl>
+								<dt><a href="/introduce/campus/01.jsp"><img src="/images/gnb/intro_gnb06.gif"  alt="캠퍼스안내" /></a></dt>
+									<dd><a href="/introduce/campus/01.jsp">캠퍼스맵</a></dd>
+									<!--<dd><a href="/introduce/campus/02.jsp">메디컬캠퍼스투어</a></dd>
+									<dd><a href="/introduce/campus/03.jsp">가천강화연수원투어</a></dd>-->
+									<dd><a href="/introduce/campus/04.jsp">오시는길</a></dd>
+							</dl>
+						</div>
+                    </div>   
+                </li>
+                <li class="gnb2" ><a class="d1" href="http://admission.gachon.ac.kr/gachon/" target="_blank" title="새창으로열림"><img src="/images/gnb/gnb02_off.png" class="png24"  alt="입학"/></a>
+                    <!--div class="gnbsub">
+						<div class="inner">
+							<dl>
+								<dt><a href="http://admission.gachon.ac.kr/gachon/" target="_blank" title="새창으로열림"><img src="/images/gnb/admission_gnb01.gif"  alt="글로벌캠퍼스" /></a></dt>
+							</dl>
+							<dl>
+								<dt><a href="http://ipsi.gachon.ac.kr/" target="_blank" title="메디컬캠퍼스"><img src="/images/gnb/admission_gnb02.gif"  alt="메디컬캠퍼스" /></a></dt>
+							</dl>
+						</div>
+                    </div-->
+                </li>
+                <li class="gnb3" ><a class="d1" href="/university/college/college_intro.jsp"><img src="/images/gnb/gnb03_off.png" class="png24"  alt="대학 대학원"/></a>
+                    <div class="gnbsub">
+						<div class="inner">
+							<dl>
+								<dt><a href="/university/college/college_intro.jsp"><img src="/images/gnb/uni_gnb01.gif"  alt="(대학)글로벌캠퍼스" /></a></dt>
+									<dd><a href="/university/college/culture_intro.jsp">가천리버럴아츠칼리지</a></dd>
+									<dd><a href="/university/college/business1_intro.jsp ">경영대학</a></dd>
+									<dd><a href="/university/college/socialscience_intro.jsp ">사회과학대학</a></dd>
+									<dd><a href="/university/college/civilization_intro.jsp">인문대학</a></dd>
+									<dd><a href="/university/college/law_intro.jsp">법과대학</a></dd>
+									<!--dd><a href="/university/college/archi_intro.jsp ">건축대학</a></dd-->
+									<dd><a href="/university/college/engineering_intro.jsp ">공과대학</a></dd>
+									<dd><a href="/university/college/bionano_intro.jsp ">바이오나노대학</a></dd>
+									<dd><a href="/university/college/it_intro.jsp ">IT융합대학</a></dd>
+									<!--dd><a href="/university/college/natural_intro.jsp">자연과학대학</a></dd-->
+									<dd><a href="/university/college/koreanmedicine_intro.jsp">한의과대학</a></dd>
+									<dd><a href="/university/college/art_intro.jsp ">예술대학</a></dd>
+									<!--dd><a href="/university/college/music_intro.jsp ">음악대학</a></dd-->
+									<!--dd><a href="/university/college/domesticscience_intro.jsp ">생활과학대학</a></dd-->
+									<dd><img src ="/images/gnb/line.png"  alt="경계분할"/>.</dd>
+									<dd><a href="/university/college/19_1.jsp">특성화사업</a></dd>
+									<dd><a href="/university/college/18_1.jsp">특성화사업단</a></dd>
+							</dl>
+							<!--dl style="width:147px; height:30px;  display:block; overflow:hidden; float:left;"-->
+							<dl>
+								<dt><a href="/university/college_ic/college_intro.jsp" title="(대학)메디컬캠퍼스"><img src="/images/gnb/uni_gnb02.gif"  alt="(대학)메디컬캠퍼스" /></a></dt>
+									<dd><a href="http://medicine.gachon.ac.kr/index.php" target="_blank">의과대학</a></dd>
+									<dd><a href="/university/college_ic/pharmacy_intro.jsp ">약학대학</a></dd>
+									<dd><a href="/university/college_ic/nursing_intro.jsp">간호대학</a></dd>
+									<dd><a href="/university/college_ic/volunteer_intro.jsp ">보건과학대학</a></dd>
+									<dd><img src ="/images/gnb/line.png"  alt="경계분할"/>.</dd>
+									<!--dd><a href="/university/college_ic/business_ic_intro.jsp ">경상학부</a></dd>
+									<dd><a href="/university/college_ic/life_ic_intro.jsp ">생명과학부</a></dd>
+									<dd><a href="/university/college_ic/health_ic_intro.jsp ">보건과학부</a></dd>
+									<dd><a href="/university/college_ic/media_ic_intro.jsp ">의료공학부</a></dd> 
+									<dd><a href="/university/college_ic/ie_ic_intro.jsp ">정보공학부</a></dd>
+									<dd><a href="/university/college_ic/physical_ic_intro.jsp ">체육과학부</a></dd-->
+									<dd><a href="/university/college_ic/liberal_ic_intro.jsp ">가천리버럴아츠칼리지(M)</a></dd>
+							</dl>
+							<dl style="width:158px; overflow:hidden; float:left;">
+								<dt><a href="/university/postgraduate/general_intro.jsp"><img src="/images/gnb/uni_gnb03.gif"  alt="(대학원)글로벌캠퍼스" /></a></dt>
+									<dd><a href="/major2/ilban/index.jsp" target="_blank">일반대학원</a></dd> 
+									<dd><a href="/university/postgraduate/business.jsp">경영대학원</a></dd> 
+									<dd><a href="/major2/kusc/index.jsp" target="_blank">교육대학원</a></dd> 
+									<dd><a href="/major2/kp/index.jsp" target="_blank">사회정책대학원</a></dd> 
+									<dd><a href="/university/postgraduate/industry.jsp">산업환경대학원</a></dd>
+									<!--<dd><a href="/university/postgraduate/design.jsp">디자인대학원</a></dd>--> 
+									<!--dd><a href="/university/postgraduate/sports.jsp">스포츠문화대학원</a></dd-->
+									<dd><a href="/major2/therapy/main/index.jsp" target="_blank">특수치료대학원</a></dd>  
+									<dd><a href="/university/postgraduate/game.jsp">게임대학원</a></dd>
+									<!--dd><a href="/university/postgraduate/gshb.jsp">보건대학원(건강뷰티전공)</a></dd-->
+									<dd><a href="/university/postgraduate/prospectus.jsp">모집요강</a></dd>
+									<dd><a href="/university/postgraduate/application.jsp">입학원서및학업(연구)계획서</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="/university/postgraduate_ic/general_intro.jsp" title="새창열림"><img src="/images/gnb/uni_gnb04.gif"  alt="(대학원)메디컬캠퍼스" /></a></dt>
+									<dd><a href="/major2/graduate/main/index.jsp">일반대학원</a></dd>
+									<dd><a href="/university/postgraduate_ic/mg_intro01.jsp">의학전문대학원</a></dd>
+									<dd><a href="/university/postgraduate_ic/intro_health.jsp">보건대학원</a></dd>
+									<dd><a href="/university/postgraduate_ic/intro_nursing.jsp">간호대학원</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="/university/ganghwa/hawaii_intro.jsp"><img src="/images/gnb/uni_gnb05.gif"  alt="가천리더십센터" /></a></dt>
+									<dd><a href="/university/ganghwa/hawaii_intro.jsp">하와이가천글로벌센터</a></dd>
+									<dd><a href="/university/ganghwa/ganghwa_intro.jsp">가천리더십센터</a></dd>
+									
+							</dl>
+						</div>
+                    </div>
+                </li>
+                <li class="gnb4"><a class="d1" hrefhttp://www.gachon.ac.krresearch/laboratory/01.jsp"><img src="/images/gnb/gnb04_off.png" class="png24"  alt="연구 산학"/></a>
+                    <div class="gnbsub">
+						<div class="inner">
+							 <dl>
+								<dt><a href="http://gcurnd.gachon.ac.kr" target="_blank"><img src="/images/gnb/research_gnb01.gif"  alt="산학협력단 홈페이지 바로가기"/></a></dt>          
+									<dd><a href="http://gcurnd.gachon.ac.kr" target="_blank">산학협력단 홈페이지</a></dd>
+									<dd><a href="http://gcurnd.gachon.ac.kr/community/register-write.jsp" target="_blank">산학협력단 e-신문고</a></dd>         
+							</dl>
+							<dl>
+								<dt><a href="https://gcusanhak.gachon.ac.kr/sso/main.jsp" target="_blank"  title="새창으로열림"><img src="/images/gnb/research_gnb06.gif"  alt="연구서비스"/></a></dt>
+									<dd><a href="https://gcusanhak.gachon.ac.kr/sso/main.jsp" target="_blank"  title="">산단통합관리시스템</a></dd>
+									<dd><a href="https://gcusanhak.gachon.ac.kr/sso/main.jsp" target="_blank"  title="">연구지원관리시스템</a></dd>
+									
+							</dl>
+							<dl>
+								<dt><a href="/research/center/01.jsp"><img src="/images/gnb/research_gnb02.gif"  alt="연구소안내"/></a></dt>
+									<dd><a href="/research/center/01.jsp">부속·부설연구기관</a></dd>
+									<dd><a href="/research/center/02.jsp">연구처부설연구소</a></dd>
+
+							</dl>
+						</div>
+                    </div>
+                </li>
+                <li class="gnb5" ><a class="d1" href="/affairs/info/03.jsp"><img src="/images/gnb/gnb05_off.png" class="png24"  alt="학사안내"/></a>
+                    <div class="gnbsub">
+						<div class="inner">
+							<dl>
+								<dt><a href="/affairs/info/03.jsp"><img src="/images/gnb/affairs_gnb01.gif"  alt="학사정보"/></a></dt>
+									<dd><a href="/affairs/info/02.jsp?boardType_seq=395">학사일정</a></dd>
+									<dd><a href="/affairs/info/03.jsp">학사안내</a></dd>
+									<dd><a href="/affairs/info/04.jsp?boardType_seq=341">학사FAQ</a></dd>
+									<dd><a href="/affairs/info/05.jsp?boardType_seq=342">학사Q&amp;A</a></dd>
+									<dd><a href="/affairs/info/09.jsp?boardType_seq=782">P학기제FAQ</a></dd>
+									<dd><a href="/affairs/info/10.jsp?boardType_seq=783">P학기제Q&amp;A</a></dd>
+									<dd><a href="/affairs/info/06.jsp?boardType_seq=343">서식다운로드</a></dd>
+									<!--dd><a href="/affairs/info/07.jsp">편의업무안내</a></dd-->
+							</dl>
+							<dl>
+								<dt><a href="/affairs/scholar/01.jsp"><img src="/images/gnb/affairs_gnb02.gif"  alt="장학"/></a></dt>
+									<dd><a href="/affairs/scholar/01.jsp">장학안내</a></dd>
+									<dd><a href="/affairs/scholar/03.jsp?boardType_seq=344">장학 FAQ</a></dd>
+									<dd><a href="/affairs/scholar/04.jsp?boardType_seq=345">장학 Q&amp;A</a></dd>
+									<dd><a href="/affairs/scholar/07.jsp?boardType_seq=760">합격수기</dd>
+									<dd><a href="/affairs/scholar/05.jsp">편의업무안내</a></dd>
+									<dd><a href="/affairs/scholar/06.jsp">장애학생지원센터</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="/affairs/tuition/01.jsp"><img src="/images/gnb/affairs_gnb07.gif"  alt="등록금"/></a></dt>
+									<dd><a href="/affairs/tuition/01.jsp">수납일정</a></dd>
+									<dd><a href="/affairs/tuition/02.jsp">수납안내</a></dd>
+									<dd><a href="/affairs/tuition/03.jsp">고지서출력</a></dd>
+									<dd><a href="/affairs/tuition/04.jsp">증명서출력</a></dd>
+									<dd><a href="/affairs/tuition/05.jsp">등록금FAQ</a></dd>
+									<dd><a href="/affairs/tuition/06.jsp">등록금Q&A</a></dd>
+									<dd><a href="/affairs/tuition/07.jsp">서식다운로드</a></dd>
+									
+							</dl>
+							<dl>
+								<dt><a href="/affairs/job/01.jsp" target="_blank" title="새창열림"><img src="/images/gnb/affairs_gnb03.gif"  alt="취업"/></a></dt>
+									<dd><a href="http://work.gachon.ac.kr" target="_blank" title="새창열림">취업안내</a></dd>
+									<!--dd><a href="/affairs/job/01.jsp" target="_blank" title="새창열림">취업안내(메디컬)</a></dd-->
+							</dl>
+							<!--dl>
+								<dt><a href="/affairs/military/01.jsp"><img src="/images/gnb/affairs_gnb04.gif"  alt="병무"/></a></dt>
+									<dd><a href="/affairs/military/01.jsp">연대본부소개</a></dd>
+									<dd><a href="/affairs/military/02.jsp">학생징병검사안내</a></dd>
+									<dd><a href="/affairs/military/03.jsp">학생입영연기</a></dd>
+									<dd><a href="/affairs/military/04.jsp">재학생입영출원</a></dd>
+									<dd><a href="/affairs/military/05.jsp">학생민방위훈련면제</a></dd>
+									<dd><a href="/affairs/military/06.jsp">군대제대후복학절차</a></dd>
+									<dd><a href="/affairs/military/07.jsp">학생예비군훈련혜택</a></dd>
+									<dd><a href="/affairs/military/08.jsp">전문연구요원제도안내</a></dd>
+									<dd><a href="/affairs/military/09.jsp">육해공군장병시험지원안내</a></dd>
+									<dd><a href="/affairs/military/10.jsp">국외여행 및 유학신고 안내</a></dd>
+									<!--dd><a href="/affairs/military/11.jsp?boardType_seq=347">병무 FAQ</a></dd-->
+							</dl-->
+							<dl>         
+								<dt><a href="/affairs/exchange/01.jsp"><img src="/images/gnb/affairs_gnb05.gif"  alt="국제교류"/></a></dt>
+									<dd><a href="/affairs/exchange/01.jsp">국제교류프로그램</a></dd>
+									<dd><a href="/affairs/exchange/02.jsp">교류대학소개</a></dd>
+									<!--dd><a href="/affairs/exchange/03.jsp?boardType_seq=349">커뮤니케이션</a></dd>
+									<dd><a href="/affairs/exchange/04.jsp?boardType_seq=352">해외교육체험기</a></dd-->
+									<dd><a href="http://oia.gachon.ac.kr" target="_blank">International Students</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="/community/counsel/01.jsp"><img src="/images/gnb/community_gnb03.gif"  alt="학생상담"/></a></dt>
+									<dd><a href="/community/counsel/01.jsp">상담실소개</a></dd>
+									<dd><a href="/community/counsel/02.jsp" >종합상담실이용안내</a></dd>
+									<dd><a href="/community/counsel/08.jsp?boardType_seq=393" >공지사항</a></dd>
+									<dd><a href="/community/counsel/03_01.jsp?boardType_seq=532" >신청게시판</a></dd>
+									<dd><a href="/community/counsel/03_05.jsp?boardType_seq=673" >상담프로그램 후기</a></dd>
+									<dd><a href="/community/counsel/04.jsp?boardType_seq=391" >아름다운 글샘</a></dd>
+									<dd><a href="/community/counsel/05.jsp?boardType_seq=537" >내마음 바로알기</a></dd>
+									<dd><a href="/community/counsel/06.jsp?boardType_seq=536" >gallery</a></dd>
+									<dd><a href="/community/counsel/07.jsp" >양성평등상담실</a></dd>
+									
+									<!--<dd><a href="/community/counsel/02.jsp?boardType_seq=391">좋은 글과 시</a></dd>
+									<dd><a href="/community/counsel/04.jsp?boardType_seq=393">공지사항</a></dd>
+									<dd><a href="/community/counsel/05.jsp?boardType_seq=394">학생상담FAQ</a></dd>-->
+							</dl>
+							
+						</div>
+                    </div>
+                </li>
+                <!--li class="gnb6"><a class="d1" href="https://www.gachon.ac.kr/site/login.jsp?return_url=http://gcis.gachon.ac.kr/sso/login.jsp" target="_blank" title="새창열림" ><img src="/images/gnb/gnb06_off.png" class="png24"  alt="학사행정"/></a></li-->
+				<li class="gnb6"><a class="d1" href="#" target="_blank" onclick="otp();return false;" title="새창열림" ><img src="/images/gnb/gnb06_off.png" class="png24"  alt="학사행정"/></a></li>
+                <li class="gnb7"><a class="d1" href="/community/opencampus/03.jsp?boardType_seq=358"><img src="/images/gnb/gnb07_off.png" class="png24"  alt="커뮤니티"/></a>
+                    <div class="gnbsub">
+						<div class="inner">
+							 
+
+							<dl style="width:116px; overflow:hidden; float:left;"> 
+								<dt><a href="/community/opencampus/03.jsp?boardType_seq=358"><img src="/images/gnb/community_gnb02.gif"  alt="열린캠퍼스"/></a></dt>
+									<!--<dd><a href="/community/opencampus/01.jsp">학생자치기구</a></dd>
+									<dd><a href="/community/opencampus/02.jsp">동아리소개</a></dd>-->
+									<dd><a href="/community/opencampus/03.jsp?boardType_seq=358">공지사항</a></dd>
+									<dd><a href="/community/opencampus/04.jsp?boardType_seq=359">가천뉴스</a></dd>
+									<dd><a href="/community/opencampus/05.jsp?boardType_seq=360">행사소식</a></dd>
+									<dd><a href="/community/opencampus/06.jsp?boardType_seq=340">학사소식</a></dd>
+									<dd><a href="/community/opencampus/07.jsp?boardType_seq=361">장학소식</a></dd> 
+									<dd><a href="/community/opencampus/19.jsp?boardType_seq=773">취업소식</a></dd>
+									<dd><a href="/community/opencampus/15.jsp?boardType_seq=530">학생소식</a></dd>
+									<dd><a href="/community/opencampus/08.jsp?boardType_seq=362">교수상조회</a></dd> 
+									<dd><a href="/community/opencampus/09.jsp?boardType_seq=363">직원상조회</a></dd>
+									<dd><a href="/community/opencampus/10.jsp?boardType_seq=364">토론광장</a></dd>
+									<dd><a href="/community/opencampus/11.jsp?boardType_seq=365">공개자료실</a></dd> 
+									<dd><a href="/community/opencampus/12.jsp?boardType_seq=366">가천장터</a></dd>
+									<dd><a href="/community/opencampus/13.jsp?boardType_seq=368">주변정보</a></dd>
+									<dd><a href="/community/openinfo/01.jsp">정보공개</a></dd>  
+							</dl>
+							
+							<dl>
+								<dt><a href="/community/praise/01.jsp"><img src="/images/gnb/community_gnb04.gif"  alt="커뮤니티"/></a></dt>
+									<dd><a href="/community/hiring/04.jsp?boardType_seq=775">계약직채용</a></dd> 
+									<dd><a href="/community/hiring/02.jsp?boardType_seq=738">조교채용</a></dd>
+									<dd><a href="/community/life/01.jsp">가천라이프</a></dd>
+									<dd><a href="http://cafe.gachon.ac.kr">카페</a></dd>
+									<dd><a href="http://www.gachon.ac.kr/community/webhard/01.jsp">웹하드</a></dd>
+									<!--dd><a href="https://www.gachon.ac.kr/pop_webhard1.html" onclick="window.open(this.href,'intro','width=400,height=321,top=0,left=100,scrollbars=no,menubar=no,toolbar=no,status=no');return false;">웹하드</a></dd-->
+									<dd><a href="/community/homepage/01.jsp">홈페이지광장</a></dd>
+									<dd><a href="/community/praise/01.jsp">칭찬마당</a></dd>
+									<dd><a href="/community/survey/01.jsp">설문조사</a></dd>
+									<dd><a href="/community/survey/02.jsp">온라인 POLL</a></dd>
+									<dd><a href="https://www.gachon.ac.kr/community/sinmungo/01_nice.jsp">가천 옴부즈</a></dd>
+									<dd><a href="/community/cleanworld/main.jsp">청탁금지법</a></dd>
+									<!--dd><a href="/community/gachon2025/2025.jsp?boardType_seq=703">가천2025프로젝트</a></dd-->
+
+							</dl>
+
+							<dl>
+								<dt><a href="/affairs/remote/01.jsp"><img src="/images/gnb/affairs_gnb06.gif"  alt="사이버캠퍼스"/></a></dt>
+									<dd><a href="/affairs/remote/01.jsp">소개</a></dd>
+							</dl>
+							
+
+						</div>
+                    </div>
+                </li>
+            </ul>
+        </div><!--head-->
+    </div> <!--//gnb-->
+
+	
+</div><!--//header-->
+
+
+<script type="text/javascript">
+
+	//----------------------------------------
+	// 팝업 오픈시 주석해제
+	//----------------------------------------
+	function openMail(){
+		//window.open('/pop_webmail.html', 'web_120801', 'left=460,top=50,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,copyhistory=yes,width=540,height=670');
+	}
+
+</script>
+
+	<hr />
+	<p class="title"><img src="/images/common/sub_title_all.png" alt="가천대 로고" class="png24" /></p>                                  
+
+
+
+<!--//left//-->
+
+
+
+<div id="container" >
+    <div id="snb">
+        <div class="left">
+
+        <h3><img src="/images/snb/h3_chairman.gif" alt="총장실" /></h3>
+        <ul  class="depth2">
+            <li><a href="/introduce/chairman/01.jsp" ><img src="/images/snb/snb_chairman_1_on.gif" alt="총장인사말" /></a></li>
+            <li><a href="/introduce/chairman/02.jsp" ><img src="/images/snb/snb_chairman_2.gif" alt="약력.경력" /></a></li>
+            <li><a href="/introduce/chairman/03.jsp?boardType_seq=321" ><img src="/images/snb/snb_chairman_3.gif" alt="포토갤러리" /></a></li>
+            <!--<li><a href="/introduce/chairman/04.jsp?boardType_seq=323" ><img src="/images/snb/snb_chairman_4.gif" alt="메세지함" /></a></li>-->
+        </ul>
+        <div class="bottom" style="height:200px;"></div>
+
+        </div><!--//left-->
+    </div><!--//snb-->
+<script type="text/javascript">
+// ujpark@gachon.ac.kr 추가 2016-06-30
+$(document).ready(function(){
+	$("#snb").height($("#snb div.left").height()); 
+});
+</script>
+
+
+<!--//총장인사말//-->
+<div id="content">
+
+    <!--//summary//-->
+    <div class="summary">
+        <h4>
+			<img src="/images/tit/h4_chairman_1.gif" alt="가천대학교 총장 이길여 박사" /> 
+		</h4>
+        <ul>
+            <li><a href="/"><img src="/images/common/icon_home.gif" alt="홈으로" /></a></li>
+            <li> &gt; 대학소개 </li>
+            <li> &gt; 총장실 </li>
+            <li> &gt; <strong> 총장인사말</strong></li>
+        </ul>
+    </div>
+
+    <div class="cha_intro">
+    	<div class="intro">
+        	<img src="/images/introduce/txt_chairman_20180703.jpg" alt="세계무대에 내놓을 글로벌 인재를 키웁니다. 대학통합으로 10대명문대학 도약! 크게꿈구고 열정적으로 공부하는 대학으로 가천대학교 총장 이길여 박사" />
+        </div><!--//intro--> 
+        <div class="cha_txt"> 
+어서 오십시오. 참 잘 오셨습니다.<br />
+‘향기롭고 아름다운 샘(가천·嘉泉)’ 동산을 찾아주셔서 감사드립니다. 저는 ‘가천대학교 지킴이’ 이길여 총장입니다. <br /><br />
+
+가천대는 요즘 자타가 인정하는 ‘대한민국에서 가장 발전 가능성이 큰 대학’입니다. 끊임없는 도전정신으로 똘똘 뭉친, 아주 야무지고 당찬 대학입니다. 그동안 우리 가천대는 조금이라도 부족한 게 있으면 고치고 또 고쳐왔습니다. 조금이라도 좋아진다면 바꾸고 또 바꿔, 봄날 연둣빛 잎새처럼 나날이 새로워지고 있습니다. <br /><br />
+
+뛰어난 인재들이 전국에서 몰려들고(2018학년도 2058개 고교, 2015년 1913개 고교), 젊은 교수들의 우수한 논문들이 봇물처럼 쏟아지고 있습니다. 국내외 특허출원, 연구 프로젝트 수주도 줄을 잇고 있습니다. <br /><br />
+    
+가천대는 바로 남한산성의 남쪽 ‘성남(城南)’에 있습니다. 왼팔엔 ‘천당아래에 있다는 분당’, 오른팔엔 88올림픽의 현장 ‘서울 잠실’ 그리고 앞가슴에는 ‘판교 테크노밸리’를 품고 있습니다. 미국의 실리콘밸리를 상징하는 스탠퍼드대학과 어쩌면 그리 입지조건이 판박이처럼 닮았는지 모르겠습니다.<br /><br />
+
+우리 가천대학교 교훈은 ‘박애, 봉사, 애국’입니다. 요즘 젊은이들에겐 촌스럽게 들릴지도 모르겠습니다. 하지만 내가 뭔가가 되어 조금이라도 가난하고 불쌍한 사람을 돕고, 내 이웃들을 행복하게 해 줄 수 있다면, 그게 바로 박애와 봉사요, 애국 아니겠습니까? <br /><br />
+
+그러려면 어느 분야든 일인자가 돼야 더 베풀 수 있고, 더 이웃을 보살필 수가 있고, 더 국가를 위해 봉사를 할 수도 있습니다. 일인자가 된다고 해서 결코 남을 짓밟고 올라서거나 남을 쓰러뜨리는 게 아닙니다. 자신의 일을 사랑하고 즐길 줄 알아야 일인자가 될 수 있습니다.<br /><br />
+
+ 저는 한평생 불모의 땅에 한 그루의 나무를 심는 마음으로 살아왔습니다. 의료와 교육이라는 두 분야에 밤낮을 가리지 않고 내달려 왔습니다. 의료와 교육은 결코 재산을 쌓거나 사익을 남기는 사업이 아닙니다. 백년 천년 뒤를 내다보며 오늘 사과나무 한 그루를 심는 ‘꿈을 가꾸는 사업’입니다.<br /><br />
+
+오늘날 제4차 산업혁명의 인공지능시대는 ‘정답 없는 세상’입니다. 지식은 이제 인터넷으로 얼마든지 얻을 수 있습니다. 20세기 모범답안식의 ‘낡고 굳은 지식’은 아무 짝에도 쓸모가 없습니다. 자고나면 게임의 규칙이 수시로 바뀌고, 오늘의 첨단기술이 내일이면 구닥다리가 됩니다. 오직 창의성인재만이 그 격변에 대응할 수 있습니다. <br /><br />
+
+우리 가천대는 지식과 사고력, 모험심과 호기심, 여유, 긍정심이 넘치는 도전적인 인재들을 가꾸고 키웁니다. 모두가 맨 먼저 남극의 얼음바다에 풍덩 뛰어드는 ‘퍼스트펭귄’이 되기를 원합니다. 남들이 머뭇머뭇 망설일 때, 주저 없이 그 미지의 찬 바다에 몸을 던지는 그런 불굴의 정신. 실패하면 좀 어떻습니까. 실패는 인생의 소중한 밑거름입니다. 남들의 발자국을 따라 걷는 사람은 절대 자신의 발자국을 남길 수 없습니다.<br /><br />
+
+우린 아직 가야 할 길이 멉니다. 이제 겨우 국내 10대 사학을 눈앞에 두고 있지만, 그 너머 ‘글로벌 명문대’로 우뚝 설 때까지 줄기차게 무소의 뿔처럼 앞만 보고 달리고 또 달려야 합니다. <br /><br />
+
+ 사자처럼 담대하고,<br /> 
+ 호랑이처럼 용맹하고, <br />
+ 독수리처럼 날카롭고,<br />
+ 곰처럼 우직한 청년들이여!<br /><br />
+
+ 가천동산에서 맘껏 푸른 꿈을 꾸십시오!<br />
+ 밤하늘의 별로 반짝반짝 빛나십시오!   <br /><br />
